@@ -10,7 +10,7 @@ self.addEventListener('activate', function (event) {
 
 self.addEventListener('fetch', function (event) {
   var apiUrl = 'https://api.easyvedaz.com/'
-  if (event.request.url.indexOf(url) > -1) {
+  if (event.request.url.indexOf(apiUrl) > -1) {
     return fetch(event.request)
   }
   event.respondWith(
