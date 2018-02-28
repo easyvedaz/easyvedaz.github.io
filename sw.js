@@ -46,7 +46,7 @@ self.addEventListener('fetch', function (event) {
         return response
       } else {
         return fetch(event.request).then(function (res) {
-          caches.open(CACHE_DYNAMIC_NAME).then(function (cache) {
+          return caches.open(CACHE_DYNAMIC_NAME).then(function (cache) {
             cache.put(event.request.url, res.clone())
             return res
           })
