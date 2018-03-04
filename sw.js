@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tatvacache4'
+var CACHE_NAME = 'tatvacache5'
 
 self.addEventListener('install', function (event) {
   console.log('service worker -- installing service worker...', event)
