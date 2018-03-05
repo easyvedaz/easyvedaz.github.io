@@ -6,6 +6,7 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('activate', function (event) {
   console.log('service worker -- activating serice worker...', event)
+  return self.clients.claim()
 })
 
 self.addEventListener('fetch', function (event) {
