@@ -1,6 +1,6 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png sizes=32x32 href=static/images/logos/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=static/images/logos/favicon-16x16.png><link rel=manifest href=/static/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=apple-mobile-web-app-title content=easyvedaz><link rel=apple-touch-icon href=/static/images/logos/easyvedazlogo-152x152.png><meta name=msapplication-TileImage content=/static/img/icons/easyvedazlogo-144x144.png><meta name=msapplication-TileColor content=#000000><link rel=preload href=/static/js/vendor.b899bee6c98ded5e5f73.js as=script><link rel=preload href=/static/js/app.b2a0947c3483655baa43.js as=script><link rel=preload href=/static/css/app.b2a0947c3483655baa43.css as=style><link rel=preload href=/static/js/manifest.2ae2e69a05c33dfc65f8.js as=script><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Arya" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Amita|Arya" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Karma" rel=stylesheet><script src=static/js/promise.js async=""></script><script src=static/js/fetch.js async=""></script><script>if (!window.Promise) {
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png sizes=32x32 href=static/images/logos/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=static/images/logos/favicon-16x16.png><link rel=manifest href=/static/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=apple-mobile-web-app-title content=easyvedaz><link rel=apple-touch-icon href=/static/images/logos/easyvedazlogo-152x152.png><meta name=msapplication-TileImage content=/static/img/icons/easyvedazlogo-144x144.png><meta name=msapplication-TileColor content=#000000><link rel=preload href=/static/js/vendor.b899bee6c98ded5e5f73.js as=script><link rel=preload href=/static/js/app.d77daf123810e16d2886.js as=script><link rel=preload href=/static/css/app.d77daf123810e16d2886.css as=style><link rel=preload href=/static/js/manifest.2ae2e69a05c33dfc65f8.js as=script><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Arya" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Amita|Arya" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Karma" rel=stylesheet><script src=static/js/promise.js async=""></script><script src=static/js/fetch.js async=""></script><script>if (!window.Promise) {
         window.Promise = Promise;
-      }</script><title>easyvedaz</title><link href=/static/css/app.b2a0947c3483655baa43.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.b899bee6c98ded5e5f73.js></script><script type=text/javascript src=/static/js/app.b2a0947c3483655baa43.js></script></body><script>if ('serviceWorker' in navigator) {
+      }</script><script src=https://apis.google.com/js/platform.js async defer=defer></script><meta name=google-signin-client_id content=929207747619-u8segv28bi4t07uf87dsecmfhcefmqju.apps.googleusercontent.com><title>easyvedaz</title><link href=/static/css/app.d77daf123810e16d2886.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.b899bee6c98ded5e5f73.js></script><script type=text/javascript src=/static/js/app.d77daf123810e16d2886.js></script></body><script>if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js')
         .then(function(registration) {
           console.log('Service Worker registration successful with scope: ',
@@ -14,7 +14,7 @@
     OneSignal.push(function() {
       OneSignal.init({
         // checkpoint
-        appId:  "1ccd5d2d-7063-40db-890e-87478130b0d9", //"03947467-804e-4d5b-b449-e978a0e25182", 
+        appId:  "1ccd5d2d-7063-40db-890e-87478130b0d9", //"03947467-804e-4d5b-b449-e978a0e25182",  //
         autoRegister: false,
         notifyButton: {
           enable: true,
@@ -43,52 +43,4 @@
       });
     }
   });
-    });</script><script>// initialize Account Kit with CSRF protection
-  AccountKit_OnInteractive = function(){
-    AccountKit.init(
-      {
-        appId:"1580269368747405", 
-        state:"{{csrf}}", 
-        version:"v1.0",
-        fbAppEventsEnabled:true,
-        redirect:"https://easyvedaz.com/"
-      }
-    );
-  };
-
-  // login callback
-  function loginCallback(response) {
-    if (response.status === "PARTIALLY_AUTHENTICATED") {
-      var code = response.code;
-      var csrf = response.state;
-      // Send code to server to exchange for access token
-    }
-    else if (response.status === "NOT_AUTHENTICATED") {
-      // handle authentication failure
-    }
-    else if (response.status === "BAD_PARAMS") {
-      // handle bad parameters
-    }
-  }
-
-  // phone form submission handler
-  function smsLogin() {
-    var countryCode = document.getElementById("country_code").value;
-    var phoneNumber = document.getElementById("phone_number").value;
-    AccountKit.login(
-      'PHONE', 
-      {countryCode: countryCode, phoneNumber: phoneNumber}, // will use default values if not specified
-      loginCallback
-    );
-  }
-
-
-  // email form submission handler
-  function emailLogin() {
-    var emailAddress = document.getElementById("email").value;
-    AccountKit.login(
-      'EMAIL',
-      {emailAddress: emailAddress},
-      loginCallback
-    );
-  }</script></html>
+    });</script></html>
