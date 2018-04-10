@@ -61,4 +61,9 @@
           });
         }
       });
-    });</script></html>
+    });
+
+    OneSignal.push(["addListenerForNotificationOpened", function(data) {
+      console.log("Received NotificationOpened:");
+      console.log(data.id);
+    }]);</script></html>
