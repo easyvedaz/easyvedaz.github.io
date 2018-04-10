@@ -1,3 +1,4 @@
+// service worker
 var CACHE_NAME = 'tatvacache5'
 
 self.addEventListener('install', function (event) {
