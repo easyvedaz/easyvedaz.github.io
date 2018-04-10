@@ -20,6 +20,16 @@
         notificationClickHandlerAction: 'focus',
         notifyButton: {
           enable: true,
+          text: {
+            'tip.state.unsubscribed': 'Subscribe to get Shloka of Day'
+          },
+          displayPredicate: function() {
+            return OneSignal.isPushNotificationsEnabled()
+                .then(function(isPushEnabled) {
+                    /* The user is subscribed, so we want to return "false" to hide the Subscription Bell */
+                    return !isPushEnabled;
+                });
+          }
         },
       });
 
