@@ -22,7 +22,7 @@ self.addEventListener('fetch', function (event) {
   var apiUrl = 'https://api.easyvedaz.com/'
   var oneSignalUrl = 'OneSignalSDK.js'
   if (event.request.url.indexOf(apiUrl) > -1 || event.request.url.indexOf(oneSignalUrl) > -1) {
-    return fetch(event.request)
+    return //fetch(event.request)
   }
 
   event.respondWith(
