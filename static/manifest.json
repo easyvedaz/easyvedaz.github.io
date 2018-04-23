@@ -35,7 +35,7 @@
     ],
     "Scope": "/",
     "start_url": "/",
-    "display": "fullscreen",
+    "display": "standalone",
     "background_color": "#009688",
     "theme_color": "#E64A19",
     "gcm_sender_id_comment": "For OneSignal Web Push Notifications, Do Not Change ID",
